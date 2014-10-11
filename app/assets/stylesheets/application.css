@@ -23,6 +23,10 @@
        url('../assets/font/glyphicons-halflings-regular.woff') format('woff'), 
        url('../assets/font/glyphicons-halflings-regular.ttf') format('truetype'), 
        url('../assets/font/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../assets/font/flexslider-icon.eot?#iefix') format('embedded-opentype'), 
+       url('../assets/font/flexslider-icon.woff') format('woff'), 
+       url('../assets/font/flexslider-icon.ttf') format('truetype'), 
+       url('../assets/font/flexslider-icon.svg#flexslider-icon') format('svg');     
 }
 
 *{
@@ -190,4 +194,32 @@ p{
 }
 .color_20 {
 color: rgb(95, 7, 18);
+}
+.menu-list{
+	padding: 10px;
+	background-color: #BF945D;
+	height: 170px;
+}
+
+.menu-list img{
+	height: 140px;
+	margin: 5px;
+	padding: 5px;
+}
+
+#carousel{
+	border: none;
+	background-color: #BF945D;
+}
+
+.foot_menu{
+	background-color: #381402;
+	padding: 5px 0;
+}
+
+#slider{
+	height: 305px;
+}
+#slider img{
+	height: 305px;
 }
