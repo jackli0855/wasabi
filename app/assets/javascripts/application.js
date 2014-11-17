@@ -15,3 +15,13 @@
 //= require bootstrap.min
 //= require turbolinks
 //= require_self
+
+
+function order(){
+	var selected_img = $(".flex-active-slide");
+	if(selected_img.size() > 0){
+		var img_src = selected_img.first().find("img").attr("src");
+		$("#selected_img").attr("value", img_src);
+		$("#order_form").submit();
+	}
+}

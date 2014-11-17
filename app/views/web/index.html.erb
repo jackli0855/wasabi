@@ -46,9 +46,12 @@
 				<span style="line-height:1.6em;">1-800-000-0000</span>
 			</span>
 		</h5>
-		<p class="about-body-part-center margin_p">
-			<button type="button" class="btn btn-danger btn-lg btn-block">お弁当注文</button>
-		</p>
+		<%= form_tag("#{send_order_web_index_path()}", method: "post", id: "order_form") do %>
+			<input id='selected_img' type='hidden' name='selected_img' value=''>
+			<p class="about-body-part-center margin_p">
+				<button type="button" class="btn btn-danger btn-lg btn-block" onclick="order()">お弁当注文</button>
+			</p>
+		<% end %>
 	</div>
 </div>
 </div>
