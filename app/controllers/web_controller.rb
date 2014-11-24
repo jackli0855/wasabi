@@ -14,7 +14,7 @@ class WebController < ApplicationController
 	def order
 		@purchase = Purchase.new(purchase_params)
 		if @purchase.save
-			redirect :action => "order_over"
+			redirect_to :action => "order_over"
 		end
 	end
 

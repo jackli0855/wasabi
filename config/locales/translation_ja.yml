@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      purchase: 注文  #g
+    attributes:
+      purchase:
+        name: 氏名  #g
+        email: メールアドレス  #g
+        email_confirmation: メールアドレス確認  #g
+        tel: 携帯電話
+        memo: メモ

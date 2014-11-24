@@ -22,7 +22,7 @@
           <div class="masthead">
             
             <ul class="nav nav-pills nav-justified myNav">
-              <li class="active"><a href="#" class="font_1">HOME</a></li>
+              <li class="active"><a href="/web/index" class="font_1">HOME</a></li>
               <li><a href="#" class="font_1">MENU</a></li>
               <li><a href="#" class="font_1">DRINKING</a></li>
               <li><a href="#" class="font_1">About</a></li>
@@ -42,9 +42,29 @@
 <script src="/assets/jquery.flexslider-min.js"></script>
 
 <script>
-$(window).load(function() {
-  // The slider being synced must be initialized first
-  $('#carousel').flexslider({
+// $(window).load(function() {
+//   // The slider being synced must be initialized first
+//   $('#carousel').flexslider({
+//     animation: "slide",
+//     controlNav: false,
+//     animationLoop: false,
+//     slideshow: false,
+//     itemWidth: 140,
+//     itemMargin: 10,
+//     asNavFor: '#slider'
+//   });
+   
+//   $('#slider').flexslider({
+//     animation: "slide",
+//     controlNav: false,
+//     animationLoop: false,
+//     slideshow: false,
+//     sync: "#carousel"
+//   });
+// });
+
+$(document).ready(function() {
+    $('#carousel').flexslider({
     animation: "slide",
     controlNav: false,
     animationLoop: false,

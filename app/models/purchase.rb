@@ -5,4 +5,5 @@ class Purchase < ActiveRecord::Base
 	validates :email, confirmation: true
   validates :email_confirmation, presence: true
 
+  validates_format_of :email, :with => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
 end
