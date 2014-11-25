@@ -41,3 +41,4 @@ gem 'spring',        group: :development
 gem 'simple_form', '~> 3.1.0.rc2'
 gem 'i18n-generators'
 gem 'unicorn'
+gem 'therubyracer', :platforms => :ruby
