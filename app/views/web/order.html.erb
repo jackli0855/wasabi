@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-md-10 col-md-offset-1">
+		<div class="panel panel-primary">
+			<div class="panel-heading" style="border-bottom: 1px solid rgba(24, 4, 4, 0.07);">
+				注文情報
+			</div>
+			<div class="panel-body">
+				<%= simple_form_for(@purchase, url: order_web_index_path, html: {}) do |f| %>
+					<%= f.error_notification %>	
+					<div class="form-group">
+						<label class="control-label col-md-2"></label>												
+						<div class="col-md-10">
+							<%= image_tag @purchase.selected_img %>
+							<%= f.hidden_field :selected_img %>
+							<%#= image_tag "/assets/a.png" %>
+						</div><!-- /.col -->
+					</div><!-- /form-group -->
+
+					
+					<%= f.input :name, placeholder:'氏名' %>
+					<%= f.input :email, placeholder: 'Enter email' %>
+					<%= f.input :email_confirmation, placeholder: 'Enter email confirm' %>
+					<%= f.input :tel %>
+					<%= f.input :memo, as: :text %>
+					<%= f.button :submit, "注文", class: "my-button" %>
+				<% end %><!--/form-->
+			</div>
+		</div>
+	</div>
+</div>

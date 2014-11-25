@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Wasabi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application' %>
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/south-street/jquery-ui.css" id="theme">
+<link rel="stylesheet" href="/assets/flexslider.css">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container ">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="top">
+            <div class="top-body">
+              
+            </div>
+          </div>
+          <div class="masthead">
+            
+            <ul class="nav nav-pills nav-justified myNav">
+              <li class="active"><a href="/web/index" class="font_1">HOME</a></li>
+              <li><a href="#" class="font_1">MENU</a></li>
+              <li><a href="#" class="font_1">DRINKING</a></li>
+              <li><a href="#" class="font_1">About</a></li>
+              <li><a href="#" class="font_1">Contact</a></li>
+            </ul>
+          </div>
+          <div class="jumbotron" style="padding:20px 10px;">
+            <%= yield %>  
+          </div>
+          <div class="footer">
+            <p><span class="color_21">Copyright © wasabiyangon &nbsp;All Right Reserved 2014</span></p>
+          </div>
+        </div>
+      </div>
+  </div>
+
+<script src="/assets/jquery.flexslider-min.js"></script>
+
+<script>
+// $(window).load(function() {
+//   // The slider being synced must be initialized first
+//   $('#carousel').flexslider({
+//     animation: "slide",
+//     controlNav: false,
+//     animationLoop: false,
+//     slideshow: false,
+//     itemWidth: 140,
+//     itemMargin: 10,
+//     asNavFor: '#slider'
+//   });
+   
+//   $('#slider').flexslider({
+//     animation: "slide",
+//     controlNav: false,
+//     animationLoop: false,
+//     slideshow: false,
+//     sync: "#carousel"
+//   });
+// });
+
+$(document).ready(function() {
+    $('#carousel').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    itemWidth: 140,
+    itemMargin: 10,
+    asNavFor: '#slider'
+  });
+   
+  $('#slider').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    sync: "#carousel"
+  });
+});
+</script>
+</body>
+</html>
