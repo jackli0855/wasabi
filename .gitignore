@@ -22,3 +22,5 @@
 
 .ruby-version
 /db/schema.rb
+
+/Gemfile
