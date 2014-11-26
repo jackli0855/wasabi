@@ -24,3 +24,4 @@
 /db/schema.rb
 
 /Gemfile
+/config/application.rb
