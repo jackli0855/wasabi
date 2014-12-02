@@ -182,7 +182,7 @@ p{
 }
 
 .foot-img{
-	min-width: 625px;
+	min-width: 100%;
 	min-height: 320px;
 	background-image: url(/assets/summary.png);
 	background-repeat: no-repeat;
@@ -227,4 +227,8 @@ color: rgb(95, 7, 18);
 .foot_menu img{
 	width: 140px;
 	height: 140px;
+}
+.logo {
+    text-align: center;
+    padding-top: 35px;
 }

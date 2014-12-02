@@ -21,6 +21,19 @@ class WebController < ApplicationController
 	def order_over
 	end
 
+	def menu
+	end
+
+	def drink
+	end
+
+	def about
+	end
+
+	def contact
+	end
+
+
 	private
     # Using a private method to encapsulate the permissible parameters
     # is just a good pattern since you'll be able to reuse the same
