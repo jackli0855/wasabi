@@ -19,14 +19,14 @@
  @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('../assets/font/glyphicons-halflings-regular.eot');
-  src: url('../assets/font/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
-       url('../assets/font/glyphicons-halflings-regular.woff') format('woff'), 
-       url('../assets/font/glyphicons-halflings-regular.ttf') format('truetype'), 
+  src: url('../assets/font/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+       url('../assets/font/glyphicons-halflings-regular.woff') format('woff'),
+       url('../assets/font/glyphicons-halflings-regular.ttf') format('truetype'),
        url('../assets/font/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
-  src: url('../assets/font/flexslider-icon.eot?#iefix') format('embedded-opentype'), 
-       url('../assets/font/flexslider-icon.woff') format('woff'), 
-       url('../assets/font/flexslider-icon.ttf') format('truetype'), 
-       url('../assets/font/flexslider-icon.svg#flexslider-icon') format('svg');     
+  src: url('../assets/font/flexslider-icon.eot?#iefix') format('embedded-opentype'),
+       url('../assets/font/flexslider-icon.woff') format('woff'),
+       url('../assets/font/flexslider-icon.ttf') format('truetype'),
+       url('../assets/font/flexslider-icon.svg#flexslider-icon') format('svg');
 }
 
 *{
@@ -34,11 +34,11 @@
 	padding: 0;
 }
 
-body { 
-    background-image: url(/assets/background.png); 
-	background-attachment: fixed; 
-	background-color: rgb(30, 28, 27); 
-	background-size: auto; background-position: 50% 0%; 
+body {
+    background-image: url(/assets/background.png);
+	background-attachment: fixed;
+	background-color: rgb(30, 28, 27);
+	background-size: auto; background-position: 50% 0%;
 	background-repeat: repeat-x;
 }
 footer { margin-top: 100px; }
@@ -182,7 +182,7 @@ p{
 }
 
 .foot-img{
-	min-width: 625px;
+	min-width: 100%;
 	min-height: 320px;
 	background-image: url(/assets/summary.png);
 	background-repeat: no-repeat;
@@ -227,4 +227,8 @@ color: rgb(95, 7, 18);
 .foot_menu img{
 	width: 140px;
 	height: 140px;
+}
+.logo {
+    text-align: center;
+    padding-top: 35px;
 }
