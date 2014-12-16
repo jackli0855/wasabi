@@ -23,6 +23,15 @@ Rails.application.routes.draw do
       post "order"
       get "order_over"
       get "index"
+      get "curry"
+      get "sushi"
+      get "about"
+      get "contact"
+      get "drink"
+      get "yakimono"
+      get "steak"
+      get "sashimi"
+      get "delivery"
     end
   end
 
