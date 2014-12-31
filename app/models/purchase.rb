@@ -1,3 +1,4 @@
+#encoding: utf-8
 class Purchase < ActiveRecord::Base
 	validates_confirmation_of :email
 

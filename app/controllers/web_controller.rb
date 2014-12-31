@@ -1,3 +1,4 @@
+#encoding: utf-8
 class WebController < ApplicationController
 
 	def send_order
