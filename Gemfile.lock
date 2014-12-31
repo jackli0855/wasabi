@@ -75,6 +75,7 @@ GEM
     nokogiri (1.6.4.1)
       mini_portile (~> 0.6.0)
     ntlm-http (0.1.1)
+    oj_mimic_json (1.0.1)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -110,7 +111,6 @@ GEM
     simple_form (3.1.0.rc2)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
-    spring (1.2.0)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -152,11 +152,11 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   multi_json (= 1.7.8)
+  oj_mimic_json
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   simple_form (~> 3.1.0.rc2)
-  spring
   sqlite3
   therubyracer
   turbolinks
