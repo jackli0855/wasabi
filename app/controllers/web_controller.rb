@@ -15,7 +15,11 @@ class WebController < ApplicationController
 	def order
 		@purchase = Purchase.new(purchase_params)
 		if @purchase.save
+			UserMailer.order_email(@purchase).deliver
+			flash[:notice] = "order successfully, and check your ordered email"
 			redirect_to :action => "order_over"
+		else
+			flash[:notice] = "order field"
 		end
 	end
 

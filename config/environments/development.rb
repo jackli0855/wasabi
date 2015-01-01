@@ -34,4 +34,25 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   address:              'wasabiyangoncom.domain.com',
+  #   port:                 587,
+  #   domain:               'wasabiyangon.com',
+  #   user_name:            'service@wasabiyangon.com',
+  #   password:             'Wasabi1025',
+  #   authentication:       'login',
+  #   enable_starttls_auto: true
+  # }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'wasabiyangon.com',
+    user_name:            'lb.funward@gmail.com',
+    password:             'lb4340345',
+    authentication:       'plain',
+    enable_starttls_auto: true
+  }
 end
