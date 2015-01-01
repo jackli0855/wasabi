@@ -4,13 +4,17 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to example.com, <%= @purchase.name %></h1>
+    <h1>Welcome to わさび, <%= @purchase.name %></h1>
     <p>
-      You have successfully signed up to example.com,
-      your username is: <%= @purchase.selected_img %>.<br>
+      <img src="<%= @purchase.selected_img%>" />
     </p>
     <p>
-      To login to the site, just follow this link: <%= @url %>.
+      You have successfully ordered,
+      your username is: <%= raw @purchase.name %><br>
+      your order time is: <%= @purchase.create_at_format %><br>
+    </p>
+    <p>
+      To info to the site, just follow this link: <%= @url %>.
     </p>
     <p>Thanks for joining and have a great day!</p>
   </body>

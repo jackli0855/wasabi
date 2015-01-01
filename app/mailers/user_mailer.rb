@@ -4,8 +4,8 @@ class UserMailer < ActionMailer::Base
 
   def order_email(purchase)
   	@purchase = purchase
-    @url  = 'http://example.com/login'
-    mail(to: @purchase.email, subject: 'Welcome to My Awesome Site')
+    @url  = 'http://wasabiyangon.com/'
+    mail(to: @purchase.email, subject: 'Order Mail')
   end
 
 end

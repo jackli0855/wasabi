@@ -21,9 +21,9 @@ module Wasabi
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     #config.i18n.default_locale = :ja
     config.encoding = "UTF-8"
-    config.action_mailer.raise_delivery_errors = true
-    config.action_mailer.default_url_options = { :host => 'localhost:3000' }
     
+    config.action_mailer.default_url_options = { :host => 'wasabiyangon.com' }
+
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
     config.i18n.available_locales = [:ja, :en]
     config.i18n.enforce_available_locales = true
