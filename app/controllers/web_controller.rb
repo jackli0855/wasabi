@@ -1,3 +1,4 @@
+#encoding: utf-8
 class WebController < ApplicationController
 
 	def send_order
@@ -14,12 +15,44 @@ class WebController < ApplicationController
 	def order
 		@purchase = Purchase.new(purchase_params)
 		if @purchase.save
+			UserMailer.order_email(@purchase).deliver
+			flash[:notice] = "order successfully, and check your ordered email"
 			redirect_to :action => "order_over"
+		else
+			flash[:notice] = "order field"
 		end
 	end
 
 	def order_over
 	end
+
+	def curry
+	end
+
+	def drink
+	end
+
+	def sashimi
+	end
+
+	def steak
+	end
+
+	def sushi
+	end
+
+	def about
+	end
+
+	def contact
+	end
+
+	def yakimono
+	end
+
+	def delivery
+	end
+
 
 	private
     # Using a private method to encapsulate the permissible parameters

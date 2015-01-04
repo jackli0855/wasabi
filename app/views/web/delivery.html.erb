@@ -1,0 +1,112 @@
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-8">
+		<div class="foot-img">
+			<!-- Place somewhere in the <body> of your page -->
+			<div id="slider" class="flexslider">
+			  <ul class="slides">
+                <li>
+                  <img src="/assets/a.png" />
+                </li>
+                <li>
+                  <img src="/assets/b.png" />
+                </li>
+                <li>
+                  <img src="/assets/c.png" />
+                </li>
+                <li>
+                  <img src="/assets/d.png" />
+                </li>
+                <li>
+                  <img src="/assets/d.png" />
+                </li>
+                <li>
+                  <img src="/assets/d.png" />
+                </li>
+                <li>
+                  <img src="/assets/c.png" />
+                </li>
+                <li>
+                  <img src="/assets/d.png" />
+                </li>
+                <li>
+                  <img src="/assets/c.png" />
+                </li>
+                <li>
+                  <img src="/assets/d.png" />
+                </li>
+			    <!-- items mirrored twice, total of 12 -->
+			  </ul>
+			</div>
+			
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-4" id="order_dev">
+		<h6 style="line-height: 2em;" class="font_6">
+			<span style="line-height:2em;">
+				<span class="color_15">デリバリーサービス！！</span>
+			</span>
+		</h6>
+		<p class="f_p">ヤンゴンで駐在している日本人の方や和食大好きな方に向けて私達の「わさび日本レストラン」からお客様のところまでお弁当配達サービスを差し上げております。</p>
+		<!--<p class="f_p">add your own text and edit me.</p>
+		<p class="f_p">​It’s easy. Just click “Edit Text”&nbsp;or double click me and you can&nbsp;start adding your own content...</p>
+		<p class="f_p">&nbsp;</p>
+		<p class="f_p">Click here to make a reservation online or&nbsp;<strong>call us</strong></p>-->
+        <!--<p class="f_p">&nbsp;</p>-->
+        <!--<p class="f_p">下記のボタンをクリックして注文してください。</strong></p>-->
+		<!--<h5 style="line-height: 1.6em;" class="font_5">
+			<span class="color_20">
+				<span style="line-height:1.6em;">1-800-000-0000</span>
+			</span>
+		</h5>-->
+      　<span style="line-height: 2em;"></span>
+		<%= form_tag("#{send_order_web_index_path()}", method: "post", id: "order_form") do %>
+			<input id='selected_img' type='hidden' name='selected_img' value=''>
+			<p class="about-body-part-center margin_p">
+				<button type="button" class="btn btn-danger btn-lg btn-block" onclick="order()">注文します。</button>
+			</p>
+		<% end %>
+	</div>
+</div>
+</div>
+<div class="body_bottom">
+<div class="foot_menu">
+	<div class="menu-list">
+		<div id="carousel" class="flexslider">
+		  <ul class="slides">
+		    <li>
+		      <img src="/assets/a.png" />
+		    </li>
+		    <li>
+		      <img src="/assets/b.png" />
+		    </li>
+		    <li>
+		      <img src="/assets/c.png" />
+		    </li>
+		    <li>
+		      <img src="/assets/d.png" />
+		    </li>
+		    <li>
+		      <img src="/assets/d.png" />
+		    </li>
+		    <li>
+		      <img src="/assets/d.png" />
+		    </li>
+            <li>
+              <img src="/assets/c.png" />
+            </li>
+            <li>
+              <img src="/assets/d.png" />
+            </li>
+            <li>
+              <img src="/assets/c.png" />
+            </li>
+            <li>
+              <img src="/assets/d.png" />
+            </li>
+		    <!-- items mirrored twice, total of 12 -->
+		  </ul>
+		</div>
+	</div>
+</div>
+
+

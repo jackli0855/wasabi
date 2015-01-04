@@ -3,12 +3,17 @@
 <head>
   <title>Wasabi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ヤンゴンで１１年目を迎える老舗です。当店は日本での調理経験を積んだ日本人経営のお店です。お客様の「うまい、やすい、満足」を目指して営業しております。
+                お一人さまでも、グループでもお気楽にご来店頂けます。
+                  正直、値段は安く、味も上という風になります。" />
+  <meta name="keywords" content="Wasabi yangon Japanese Restaurant,わさびヤンゴン,ヤンゴンで美味しい店" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application' %>
   <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/south-street/jquery-ui.css" id="theme">
-<link rel="stylesheet" href="/assets/flexslider.css">
+　　<link rel="stylesheet" href="/assets/flexslider.css">
   <%= csrf_meta_tags %>
+
 </head>
 <body>
   <div class="container ">
@@ -16,17 +21,34 @@
         <div class="col-md-10 col-md-offset-1">
           <div class="top">
             <div class="top-body">
-              
+              <div class="logo">
+                <img src="/assets/logo.png">
+              </div>
             </div>
           </div>
           <div class="masthead">
             
             <ul class="nav nav-pills nav-justified myNav">
               <li class="active"><a href="/web/index" class="font_1">HOME</a></li>
-              <li><a href="#" class="font_1">MENU</a></li>
-              <li><a href="#" class="font_1">DRINKING</a></li>
-              <li><a href="#" class="font_1">About</a></li>
-              <li><a href="#" class="font_1">Contact</a></li>
+              <li class="dropdown"> <a  href="/web/menu" class="dropdown-toggle font_1" data-toggle="dropdown">Menu<b class="caret"></b></a>
+                <ul class="dropdown-menu nav-pills myNav" role="menu" aria-labelledby="drop1">
+                  <li><a tabindex="-1" href="/web/drink">Drinks</a>
+                  </li>
+                  <li><a tabindex="-1" href="/web/curry">Curry</a>
+                  </li>
+                  <li><a tabindex="-1" href="/web/sushi">Sushi</a>
+                  </li>
+                  <li><a tabindex="-1" href="/web/sashimi">Sashimi</a>
+                  </li>
+                  <li><a tabindex="-1" href="/web/steak">Steak</a>
+                  </li>
+                  <li><a tabindex="-1" href="/web/yakimono">Yakimono</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="/web/delivery" class="font_1">Delivery</a></li>
+              <li><a href="/web/about" class="font_1">About</a></li>
+              <li><a href="/web/contact" class="font_1">Contact</a></li>
             </ul>
           </div>
           <div class="jumbotron" style="padding:20px 10px;">
@@ -38,6 +60,23 @@
         </div>
       </div>
   </div>
+  <a href="#" id="linkTop" class="backtotop"></a>
+
+  <link href="/assets/jquery.slider.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="/assets/jquery.slider.min.js"></script>
+  <script type="text/javascript">
+      $(function() {
+          $('#CSslider').slider({
+              showControls: true,
+              autoplay: true,
+              showPosition: true,
+              hoverPause: true,
+              wait: 3500,
+              fade: 500,
+              direction: "left"
+          });
+      });
+  </script>
 
 <script src="/assets/jquery.flexslider-min.js"></script>
 
@@ -53,7 +92,7 @@
 //     itemMargin: 10,
 //     asNavFor: '#slider'
 //   });
-   
+
 //   $('#slider').flexslider({
 //     animation: "slide",
 //     controlNav: false,
@@ -63,7 +102,8 @@
 //   });
 // });
 
-$(document).ready(function() {
+//$(document).ready(function() {
+$(window).load(function() {
     $('#carousel').flexslider({
     animation: "slide",
     controlNav: false,
@@ -73,7 +113,7 @@ $(document).ready(function() {
     itemMargin: 10,
     asNavFor: '#slider'
   });
-   
+
   $('#slider').flexslider({
     animation: "slide",
     controlNav: false,
@@ -82,6 +122,51 @@ $(document).ready(function() {
     sync: "#carousel"
   });
 });
+
+
+//Start drop down curry start
+
+(function ($, window, delay) {
+    // http://jsfiddle.net/AndreasPizsa/NzvKC/
+    var theTimer = 0;
+    var theElement = null;
+    var theLastPosition = {x:0,y:0};
+    $('[data-toggle]')
+            .closest('li')
+            .on('mouseenter', function (inEvent) {
+                if (theElement) theElement.removeClass('open');
+                window.clearTimeout(theTimer);
+                theElement = $(this);
+
+                theTimer = window.setTimeout(function () {
+                    theElement.addClass('open');
+                }, delay);
+            })
+            .on('mousemove', function (inEvent) {
+                if(Math.abs(theLastPosition.x - inEvent.ScreenX) > 4 ||
+                        Math.abs(theLastPosition.y - inEvent.ScreenY) > 4)
+                {
+                    theLastPosition.x = inEvent.ScreenX;
+                    theLastPosition.y = inEvent.ScreenY;
+                    return;
+                }
+
+                if (theElement.hasClass('open')) return;
+                window.clearTimeout(theTimer);
+                theTimer = window.setTimeout(function () {
+                    theElement.addClass('open');
+                }, delay);
+            })
+            .on('mouseleave', function (inEvent) {
+                window.clearTimeout(theTimer);
+                theElement = $(this);
+                theTimer = window.setTimeout(function () {
+                    theElement.removeClass('open');
+                }, delay);
+            });
+})(jQuery, window, 200); // 200 is the delay in milliseconds
+
+  //Drop down curry end
 </script>
 </body>
 </html>

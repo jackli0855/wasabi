@@ -1,153 +1,145 @@
 <div class="row">
-	<div class="col-xs-8 col-sm-8">
-		<div class="foot-img">
-			<!-- Place somewhere in the <body> of your page -->
-			<div id="slider" class="flexslider">
-			  <ul class="slides">
-			    <li>
-			      <img src="/assets/a.png" />
-			    </li>
-			    <li>
-			      <img src="/assets/b.png" />
-			    </li>
-			    <li>
-			      <img src="/assets/c.png" />
-			    </li>
-			    <li>
-			      <img src="/assets/d.png" />
-			    </li>
-			    <li>
-			      <img src="/assets/d.png" />
-			    </li>
-			    <li>
-			      <img src="/assets/d.png" />
-			    </li>
-			    <!-- items mirrored twice, total of 12 -->
-			  </ul>
-			</div>
-			
-		</div>
-	</div>
-	<div class="col-xs-4 col-sm-4" id="order_dev">
-		<h6 style="line-height: 2em;" class="font_6">
-			<span style="line-height:2em;">
-				<span class="color_15">お弁当注文出来ます！！</span>
-			</span>
-		</h6>
-		<p class="f_p">ヤンゴンで駐在している日本人の方や和食大好きな方に向けて私達の「わさび日本レストラン」からお客様のところまでお弁当配達サービスを差し上げております。</p>
-		<!--<p class="f_p">add your own text and edit me.</p>
-		<p class="f_p">​It’s easy. Just click “Edit Text”&nbsp;or double click me and you can&nbsp;start adding your own content...</p>
-		<p class="f_p">&nbsp;</p>
-		<p class="f_p">Click here to make a reservation online or&nbsp;<strong>call us</strong></p>-->
-        <p class="f_p">&nbsp;</p>
-        <p class="f_p">下記のボタンをクリックして注文してください。</strong></p>
-		<h5 style="line-height: 1.6em;" class="font_5">
-			<span class="color_20">
-				<span style="line-height:1.6em;">1-800-000-0000</span>
-			</span>
-		</h5>
-		<%= form_tag("#{send_order_web_index_path()}", method: "post", id: "order_form") do %>
-			<input id='selected_img' type='hidden' name='selected_img' value=''>
-			<p class="about-body-part-center margin_p">
-				<button type="button" class="btn btn-danger btn-lg btn-block" onclick="order()">お弁当注文</button>
-			</p>
-		<% end %>
-	</div>
+  <div class="col-xs-12 col-sm-12 col-md-8">
+          <div id="CSslider" class="col-xs-12 col-sm-12 col-md-8">
+
+            <div>
+              <img src="/assets/about/about-01.png" width="100%" height="364" /><br><br>
+              <p>
+                ヤンゴンで１１年目を迎える老舗です。<br>
+                当店は日本での調理経験を積んだ日本人経営のお店です。<br>
+                お客様の「うまい、やすい、満足」を目指して営業しております。<br>
+                お一人さまでも、グループでもお気楽にご来店頂けます。
+              </p>
+            </div>
+            <div>
+              <img src="/assets/about/about-02.png" width="100%" height="364" /><br><br>
+              <p>
+                ヤンゴンで１１年目を迎える老舗です。<br>
+                当店は日本での調理経験を積んだ日本人経営のお店です。<br>
+                お客様の「うまい、やすい、満足」を目指して営業しております。<br>
+                お一人さまでも、グループでもお気楽にご来店頂けます。
+              </p>
+            </div>
+            <div>
+              <img src="/assets/about/about-03.png" width="100%" height="364" /><br><br>
+              <p>
+                ヤンゴンで１１年目を迎える老舗です。<br>
+                当店は日本での調理経験を積んだ日本人経営のお店です。<br>
+                お客様の「うまい、やすい、満足」を目指して営業しております。<br>
+                お一人さまでも、グループでもお気楽にご来店頂けます。
+              </p>
+            </div>
+            <div>
+              <img src="/assets/about/about-04.png" width="100%" height="364" /><br><br>
+              <p>
+                ヤンゴンで１１年目を迎える老舗です。<br>
+                当店は日本での調理経験を積んだ日本人経営のお店です。<br>
+                お客様の「うまい、やすい、満足」を目指して営業しております。<br>
+                お一人さまでも、グループでもお気楽にご来店頂けます。
+              </p>
+            </div>
+            <div>
+              <img src="/assets/about/about-05.png" width="100%" height="364" /><br><br>
+              <p>
+                ヤンゴンで１１年目を迎える老舗です。<br>
+                当店は日本での調理経験を積んだ日本人経営のお店です。<br>
+                お客様の「うまい、やすい、満足」を目指して営業しております。<br>
+                お一人さまでも、グループでもお気楽にご来店頂けます。
+              </p>
+            </div>
+            <div>
+              <img src="/assets/about/about-03.png" width="100%" height="364" /><br><br>
+              <p>
+                ヤンゴンで１１年目を迎える老舗です。<br>
+                当店は日本での調理経験を積んだ日本人経営のお店です。<br>
+                お客様の「うまい、やすい、満足」を目指して営業しております。<br>
+                お一人さまでも、グループでもお気楽にご来店頂けます。
+              </p>
+            </div>
+
+          </div>
+  </div>
 </div>
 </div>
 <div class="body_bottom">
-<div class="foot_menu">
-	<div class="menu-list">
-		<div id="carousel" class="flexslider">
-		  <ul class="slides">
-		    <li>
-		      <img src="/assets/a.png" />
-		    </li>
-		    <li>
-		      <img src="/assets/b.png" />
-		    </li>
-		    <li>
-		      <img src="/assets/c.png" />
-		    </li>
-		    <li>
-		      <img src="/assets/d.png" />
-		    </li>
-		    <li>
-		      <img src="/assets/d.png" />
-		    </li>
-		    <li>
-		      <img src="/assets/d.png" />
-		    </li>
-		    <!-- items mirrored twice, total of 12 -->
-		  </ul>
-		</div>
-	</div>
-</div>
 <div class="info1">
-	<div class="row">
-		<div class="col-xs-8 col-sm-6">
-			<div class="info1-left">
-				<h4 style="line-height: 1.1em;" class="font_4"><span style="line-height:1.1em;"><span class="color_15">Welcome</span></span></h4>
-				<p class="">I'm a Paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” I'm a Paragraph...</p>
-				<p class="font_8">​</p>
-				<p>I'm a Paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me and you can start adding your own content...</p>
-			</div>
-		</div>
-		<div class="col-xs-4 col-sm-6">
-			<div class="info1-body-right">
-				<div class="row">
-					<div class="col-xs-8 col-sm-7">
-						<div class="info1-mid">
-							<h5 style="line-height: 1em;" class="font_5">
-								<span style="line-height:1em;">Special Beers</span>
-							</h5>
-							<p style="line-height: 1.3em;" class="font_8">&nbsp;</p>
-							<p class="">We source the finest beers and wines and match them with your steak.</p>
-							<p style="line-height: 1.3em;" class="font_8">&nbsp;</p>
-							<p>
-							<button type="button" class="btn btn-danger btn-lg">READ MORE</button>
-							</p>
-						</div>
-					</div>
-					<div class="col-xs-4 col-sm-5">
-						<div class="info1-right">
-							<img src="/assets/b.png" alt="Apple">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="about-info">
-	<div class="about-body">
-		<div class="row">
-			<div class="col-xs-4 col-sm-4 ">
-				<div class="bg-color-1 about-body-part">
-					<h5 class="font_5" style="text-align: center;"><span class="color_14_2">WHERE ARE WE?</span></h5>
-					<p class="" style="text-align: center;">500 Terry Francois St. SF, CA &nbsp;94158</p>
-					<p class="about-body-part-center margin_p">
-						<button type="button" class="btn btn-danger btn-lg btn-block">READ MORE</button>
-					</p>
-				</div>
-			</div>
-			<div class="col-xs-4 col-sm-4">
-				<div class="bg-color-1 about-body-part">
-					<h5 class="font_5" style="text-align: center;"><span class="color_14_2">OPENING HOURS</span></h5>
-					<p style="text-align: center;" class="">We’re open everyday&nbsp;</p>
-					<p style="text-align: center; line-height: 0.9em;" class="font_8">&nbsp;</p>
-					<h6 style="text-align: center;" class="font_6 margin_p">12:00pm-1:00am</h6>
-				</div>
-			</div>
-			<div class="col-xs-4 col-sm-4">
-				<div class="bg-color-1 about-body-part">
-					<h5 style="line-height: 1.3em; text-align: center;" class="font_5">
-						<span style="line-height:1.3em;"><span class="color_14_2">CHEF AT HOME</span></span></h5>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6">
+      <div class="info1-left">
+              <h4 style="line-height: 2em; font-size: 40px;"><span style="line-height:1.1em;"><span class="color_15">店主のおすすめ料理</span></span></h4>
+              <p>まずは寿司の紹介を。「世界一佐伯寿司」とアピールする街、大分県佐伯市出身の日本人調理師監修ですので、日本の握り寿司が食べれます！また当店はミャンマー最大手のスーパー、City Martで長年寿司コーナーを担当しております。
+                また特に欧米人のお客様に好評のアボカド入りの巻き寿司（カリフォルニアロールやフィラデルフィアロールなど）やミャンマー人に好評の生ものを使わない寿司もあり、外国人を招待されるお客さまにも重宝される品揃えです。
 
-					<p style="text-align: center;" class="">I'm a Paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text”&nbsp;</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+                その他お勧めとしては、新鮮な海老に手作りタルタルソースをつけて提供する海老フライ・・・味も値段も必ず満足頂けるメニューです。。
+                合挽き肉の手作りハンバーグ・・・熱々ジュージューの鉄板で提供しています。
+                タイフレンチ牛の牛タタキ・・・肉の旨みがしっかりあって、おつまみに合います。
+                焼きそば・・・日本製の蒸し麺を使うのですが、レシピはオリジナル。あっさりしながら美味しいと人気です。
+                出汁からしっかりとった「うどん」などもお勧めです。
+                本日朝獲れのアジ握りなんかもうまいですよ。</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6">
+      <div class="info1-body-right">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12">
+            <div class="info1-mid">
 
+                          <h4 style="line-height: 1.1em; font-size: 40px;"><span style="line-height:1.1em;"><span class="color_15">いらっしゃいませ</span></span></h4>
+                          <p>わさびは、日本の居酒屋のような気軽に立ち寄れる「美味しく、安い」お店です。メニューは手作り料理がたくさん。色々あります！
+                            お値段はメニューページをご覧ください。
+                            そうそう、生ビール600ｋｓ（約60円）です！
+                            外国人メインの飲食店らしからぬ値段で営業しております。</p>
+                          <h5 style="line-height: 1em; font-size: 28px;">
+                            <span style="line-height:1em;">ミャンマー産シーフードあります！</span>
+                          </h5>
+                          <!--<p style="line-height: 1.3em;" class="font_8">&nbsp;</p>-->
+                          <p class="">店主自ら、ほぼ毎朝ヤンゴンの魚市場に行って仕入れをします。アジやカマスや太刀魚、ロブスター、モンゴウ烏賊、ハマグリ、海老、蟹などなどミャンマー産シーフードは意外とたくさんあります。仕入れが安いんだから安く提供しています！ご賞味ください。
+                            もちろん、日本から、ノルウェーから等々輸入物もご用意。（ローカルものしかないわけではありません。）
+                          </p>
+              <p style="line-height: 1.3em;" class="font_8">&nbsp;</p>
+              <!--<p>-->
+              <!--<button type="button" class="btn btn-danger btn-lg">READ MORE</button>-->
+              <!--</p>-->
+            </div>
+          </div>
+          <!--<div class="col-xs-12 col-sm-12 col-md-5">-->
+            <!--<div class="info1-right">-->
+              <!--<img src="/assets/b.png" alt="Apple">-->
+            <!--</div>-->
+          <!--</div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="about-info">
+    <div class="about-body">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4">
+          <div class="bg-color-1 about-body-part">
+            <h5 class="font_5" style="text-align: center;"><span class="color_14_2">WHERE ARE WE?</span></h5>
+            <p class="" style="text-align: center;">38/40,Bo Yar Nyunt Street,Yaw Min Gyi Quarter,Dagon Township,Yangon</p>
+            <p class="about-body-part-center margin_p">
+              <button type="button" class="btn btn-danger btn-lg btn-block"><a href="/web/about/">READ MORE</a></button>
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4">
+          <div class="bg-color-1 about-body-part">
+            <h5 class="font_5" style="text-align: center;"><span class="color_14_2">店の営業時間</span></h5>
+            <p style="text-align: center;" class="">月曜日お休みです。&nbsp;</p>
+            <p style="text-align: center; line-height: 0.9em;" class="font_8">&nbsp;</p>
+            <h6 style="text-align: center;"class="font_3 margin_p">ランチ/ 11:30～15：00（14：30ラストオーダー）&emsp;夜  / 17:30～22：30&nbsp;&nbsp;&nbsp;（21：30ラストオーダー）</h6>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4">
+          <div class="bg-color-1 about-body-part">
+            <h5 style="line-height: 1.3em; text-align: center;" class="font_5">
+              <span style="line-height:1.3em;"><span class="color_14_2">連絡先</span></span></h5>
+
+            <p style="text-align: center;" class="">電話番号:&emsp;&emsp;:09-503-9139（日本語可）、09-4250-20667、　09-9722-76530</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

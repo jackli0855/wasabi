@@ -18,7 +18,5 @@
 #config
 /config/database.yml
 
-/Gemfile.lock
-
 .ruby-version
-/db/schema.rb
+Gemfile.lock
