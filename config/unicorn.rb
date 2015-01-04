@@ -6,7 +6,7 @@
 
 
 # Define your root directory
-root = "/home/alpha/workspace/myPro/wasabi"
+root = "/home/ec2-user/wasabi"
  
 # Define worker directory for Unicorn
 working_directory root
