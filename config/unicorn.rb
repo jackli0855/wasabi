@@ -20,7 +20,7 @@ stdout_path "#{root}/log/unicorn.log"
  
 # Listen on a UNIX data socket
 listen "/tmp/unicorn.wasabi.sock"
- 
+
 # 16 worker processes for production environment
 worker_processes 16
  
