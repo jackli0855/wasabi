@@ -6,7 +6,7 @@
 
 
 # Define your root directory
-root = "/home/alpha/workspace/myPro/wasabi"
+root = "/home/ec2-user/wasabi"
  
 # Define worker directory for Unicorn
 working_directory root
@@ -20,7 +20,7 @@ stdout_path "#{root}/log/unicorn.log"
  
 # Listen on a UNIX data socket
 listen "/tmp/unicorn.wasabi.sock"
- 
+
 # 16 worker processes for production environment
 worker_processes 16
  

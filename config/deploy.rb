@@ -1,31 +1,53 @@
-set :application, "set your application name here"
-set :repository,  "set your repository location here"
-
-set :scm, :subversion
-# Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
-
-role :web, "your web-server here"                          # Your HTTP server, Apache/etc
-role :app, "your app-server here"                          # This may be the same as your `Web` server
-role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
-role :db,  "your slave db-server here"
-
-# if you want to clean up old releases on each deploy uncomment this:
-# after "deploy:restart", "deploy:cleanup"
-
-# if you're still using the script/reaper helper you will need
-# these http://github.com/rails/irs_process_scripts
-
-# If you are using Passenger mod_rails uncomment this:
-# namespace :deploy do
-#   task :start do ; end
-#   task :stop do ; end
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-#   end
-# end
-
-set :rails_env, 'staging'                  # If the environment differs from the stage name
-set :migration_role, 'migrator'            # Defaults to 'db'
-set :conditionally_migrate, true           # Defaults to false. If true, it's skip migration if files in db/migrate not modified
-set :assets_roles, [:web, :app]            # Defaults to [:web]
-set :assets_prefix, 'prepackaged-assets'   # Defaults to 'assets' this should match config.assets.prefix in your rails config/application.rb
+require "bundler/capistrano"
+ 
+# Define your server here
+server "127.0.0.1", :web, :app, :db, primary: true
+ 
+# Set application settings
+set :application, "wasabi"
+set :user, "<deployment_user>" # As defined on your server
+set :deploy_to, "/home/#{user}/apps/#{application}" # Directory in which the deployment will take place
+set :deploy_via, :remote_cache
+set :use_sudo, false
+ 
+set :scm, "git"
+set :repository, "git@github.com:<git_user>/#{application}.git"
+set :branch, "master"
+ 
+default_run_options[:pty] = true
+ssh_options[:forward_agent] = true
+ 
+after "deploy", "deploy:cleanup" # keep only the last 5 releases
+ 
+namespace :deploy do
+  %w[start stop restart].each do |command|
+    desc "#{command} unicorn server"
+    task command, roles: :app, except: {no_release: true} do
+      run "/etc/init.d/unicorn_#{application} #{command}" # Using unicorn as the app server
+    end
+  end
+ 
+  task :setup_config, roles: :app do
+    sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
+    sudo "ln -nfs #{current_path}/config/unicorn_ini.sh /etc/init.d/unicorn_#{application}"
+    run "mkdir -p #{shared_path}/config"
+    put File.read("config/database.yml"), "#{shared_path}/config/database.yml"
+    puts "Now edit the config files in #{shared_path}."
+  end
+  after "deploy:setup", "deploy:setup_config"
+ 
+  task :symlink_config, roles: :app do
+    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+  end
+  after "deploy:finalize_update", "deploy:symlink_config"
+ 
+  desc "Make sure local git is in sync with remote."
+  task :check_revision, roles: :web do
+    unless `git rev-parse HEAD` == `git rev-parse origin/master`
+      puts "WARNING: HEAD is not the same as origin/master"
+      puts "Run `git push` to sync changes."
+      exit
+    end
+  end
+  before "deploy", "deploy:check_revision"
+end
