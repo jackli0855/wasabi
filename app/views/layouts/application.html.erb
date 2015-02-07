@@ -61,112 +61,50 @@
       </div>
   </div>
   <a href="#" id="linkTop" class="backtotop"></a>
-
-  <link href="/assets/jquery.slider.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="/assets/jquery.slider.min.js"></script>
-  <script type="text/javascript">
-      $(function() {
-          $('#CSslider').slider({
-              showControls: true,
-              autoplay: true,
-              showPosition: true,
-              hoverPause: true,
-              wait: 3500,
-              fade: 500,
-              direction: "left"
-          });
-      });
-  </script>
-
-<script src="/assets/jquery.flexslider-min.js"></script>
-
 <script>
-// $(window).load(function() {
-//   // The slider being synced must be initialized first
-//   $('#carousel').flexslider({
-//     animation: "slide",
-//     controlNav: false,
-//     animationLoop: false,
-//     slideshow: false,
-//     itemWidth: 140,
-//     itemMargin: 10,
-//     asNavFor: '#slider'
-//   });
+  //Start drop down curry start
 
-//   $('#slider').flexslider({
-//     animation: "slide",
-//     controlNav: false,
-//     animationLoop: false,
-//     slideshow: false,
-//     sync: "#carousel"
-//   });
-// });
+  (function ($, window, delay) {
+  // http://jsfiddle.net/AndreasPizsa/NzvKC/
+  var theTimer = 0;
+  var theElement = null;
+  var theLastPosition = {x:0,y:0};
+  $('[data-toggle]')
+  .closest('li')
+  .on('mouseenter', function (inEvent) {
+  if (theElement) theElement.removeClass('open');
+  window.clearTimeout(theTimer);
+  theElement = $(this);
 
-//$(document).ready(function() {
-$(window).load(function() {
-    $('#carousel').flexslider({
-    animation: "slide",
-    controlNav: false,
-    animationLoop: false,
-    slideshow: false,
-    itemWidth: 140,
-    itemMargin: 10,
-    asNavFor: '#slider'
+  theTimer = window.setTimeout(function () {
+  theElement.addClass('open');
+  }, delay);
+  })
+  .on('mousemove', function (inEvent) {
+  if(Math.abs(theLastPosition.x - inEvent.ScreenX) > 4 ||
+  Math.abs(theLastPosition.y - inEvent.ScreenY) > 4)
+  {
+  theLastPosition.x = inEvent.ScreenX;
+  theLastPosition.y = inEvent.ScreenY;
+  return;
+  }
+
+  if (theElement.hasClass('open')) return;
+  window.clearTimeout(theTimer);
+  theTimer = window.setTimeout(function () {
+  theElement.addClass('open');
+  }, delay);
+  })
+  .on('mouseleave', function (inEvent) {
+  window.clearTimeout(theTimer);
+  theElement = $(this);
+  theTimer = window.setTimeout(function () {
+  theElement.removeClass('open');
+  }, delay);
   });
-
-  $('#slider').flexslider({
-    animation: "slide",
-    controlNav: false,
-    animationLoop: false,
-    slideshow: false,
-    sync: "#carousel"
-  });
-});
-
-
-//Start drop down curry start
-
-(function ($, window, delay) {
-    // http://jsfiddle.net/AndreasPizsa/NzvKC/
-    var theTimer = 0;
-    var theElement = null;
-    var theLastPosition = {x:0,y:0};
-    $('[data-toggle]')
-            .closest('li')
-            .on('mouseenter', function (inEvent) {
-                if (theElement) theElement.removeClass('open');
-                window.clearTimeout(theTimer);
-                theElement = $(this);
-
-                theTimer = window.setTimeout(function () {
-                    theElement.addClass('open');
-                }, delay);
-            })
-            .on('mousemove', function (inEvent) {
-                if(Math.abs(theLastPosition.x - inEvent.ScreenX) > 4 ||
-                        Math.abs(theLastPosition.y - inEvent.ScreenY) > 4)
-                {
-                    theLastPosition.x = inEvent.ScreenX;
-                    theLastPosition.y = inEvent.ScreenY;
-                    return;
-                }
-
-                if (theElement.hasClass('open')) return;
-                window.clearTimeout(theTimer);
-                theTimer = window.setTimeout(function () {
-                    theElement.addClass('open');
-                }, delay);
-            })
-            .on('mouseleave', function (inEvent) {
-                window.clearTimeout(theTimer);
-                theElement = $(this);
-                theTimer = window.setTimeout(function () {
-                    theElement.removeClass('open');
-                }, delay);
-            });
-})(jQuery, window, 200); // 200 is the delay in milliseconds
+  })(jQuery, window, 200); // 200 is the delay in milliseconds
 
   //Drop down curry end
-</script>
+  </script>
 </body>
 </html>

@@ -53,6 +53,8 @@ class WebController < ApplicationController
 	def delivery
 	end
 
+	def index
+	end
 
 	private
     # Using a private method to encapsulate the permissible parameters
