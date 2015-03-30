@@ -35,7 +35,6 @@
 }
 
 body {
-    background-image: url(/assets/background.png);
 	background-attachment: fixed;
 	background-color: rgb(30, 28, 27);
 	background-size: auto; background-position: 50% 0%;
@@ -96,7 +95,7 @@ th { border-bottom: 1px solid #DDD; }
 }
 
 .jumbotron{
-	background-color: #F3DEBA;
+	background-color: #FFFFFF;
 	margin-bottom:0;
 	padding: 0;
 }
@@ -232,3 +231,4 @@ color: rgb(95, 7, 18);
     text-align: center;
     padding-top: 35px;
 }
+

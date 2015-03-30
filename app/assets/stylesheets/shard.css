@@ -1,0 +1,686 @@
+s@charset "utf-8";
+
+
+
+/* 共有ベース定義
+-----------------------------------------------	*/
+
+body {
+	text-align: center;
+	color: #5E594E;
+	cursor: auto;
+	font: normal normal 83%/1.4 'Lucida Grande',
+ 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',
+ Meiryo, メイリオ, sans-serif;
+ font-size:83%;
+	letter-spacing:normal;
+	word-spacing:normal;
+	background-color:#FFFFFF;
+}
+#wrapper_bg{
+	background-image: url(/assets/shared/header_bk.jpg);
+	background-repeat: repeat-x;
+	background-position: center top;
+}
+
+*:first-child+html img {
+	vertical-align: top;
+}
+* html img {
+	vertical-align: top;
+}
+
+/* 強調 */
+strong {
+	font-weight: bold;
+}
+
+/*=============================================*/
+/*                 テキスト 変更のみ            */
+/*=============================================*/
+
+.txt_default{color:#5E594E;}	
+.txt_red{color:#F12E03;}	
+.txt_orange{color:#FF6600;}
+
+.txt_min{font-size:85%;}
+.txt_middle{font-size:95%;}
+.txt_big{font-size:120%;}
+.txt_max{font-size:140%;}
+
+
+
+
+/*=============================================*/
+/*                テキストリンク設定           */
+/*=============================================*/
+
+/*全体のリンク*/
+a:link { color: #FF6600; text-decoration: underline;}
+a:visited,a:active { color: #F97D3A; text-decoration: underline;}
+a:hover { color: #F12E03; text-decoration:underline;}
+
+
+
+
+/*=============================================*/
+/*                ヘッド部分                   */
+/*=============================================*/
+
+/* header */
+#header {
+	width:1000px;
+	height:125px;
+	background-image: url(/assets/shared/header02.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	position:relative;
+	margin:0px auto;
+}
+#header h1 a{
+	width:350px;
+	height:85px;
+	position:absolute;
+	top:20px;
+	left:0px;
+	text-indent:-9999px;
+	display:block;
+	
+}
+
+#header p.b1{
+	width:177px;
+	height:41px;
+	top:66px;
+	left:816px;
+	overflow: hidden;
+	float: right;
+	margin-right: -53px;
+	margin-top: 14px;
+}
+
+#header #nikkeigranprix a{
+	width:89px;
+	height:74px;
+	position:absolute;
+	top:32px;
+	left:353px;
+	display:block;
+	text-indent:-9999px;
+}
+
+/* swf */
+
+div#swf{
+	width:100%;
+	height:400px;
+	background-image: url(/assets/shared/flash_bk.png);
+	background-repeat:repeat-x;
+	background-position: center top;
+}
+div#swfInner{
+	width:1000px;
+	height:400px;
+	margin:0px auto;
+}
+
+#jisseki div#swfInner{
+	background-image: url(../img/jisseki/flash.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#contact div#swfInner{
+	background-image: url(../img/contact/flash.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#fc div#swfInner{
+	background-image: url(../img/fc/flash.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#smart div#swfInner{
+	background-image: url(../img/smart/flash.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#cms div#swfInner{
+	background-image: url(../img/cms/flash.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#review div#swfInner{
+	background-image: url(../img/review/flash.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#flow div#swfInner{
+	background-image: url(../img/flow/flash.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#president div#swfInner{
+	background-image: url(../img/president/flash.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+/*=============================================*/
+/*              pページレイアウト                */
+/*=============================================*/
+
+div#container {
+	width:1000px;
+	margin:0px auto;
+	padding-bottom:20px;
+}
+div#side {
+	width:250px;
+	float:left;
+}
+
+div#wrapper {
+	width:725px;
+	float:right;
+}
+
+/*=============================================*/
+/*                1000pxメイン囲み              */
+/*=============================================*/
+
+.wraptop {
+	background-image: url(../img/index/top_bk.html);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	padding-top:20px;
+}
+
+
+
+/*=============================================*/
+/*          ナビゲーション部（グローバル）   */
+/*=============================================*/
+
+.accordion_head {cursor:pointer;}
+
+#globalNav {
+	width:230px;
+	padding:10px;
+	background-color:#F3F2E8;
+	margin-bottom:10px;
+}
+#globalNav p a{
+width:230px;
+display:block;
+text-indent:-9999px;
+}
+
+#globalNav p#n1 a{
+	height:51px;
+	background-image: url(../img/shared/navi_01.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+#globalNav p#n1 a:hover{
+	height:51px;
+	background-image: url(../img/shared/navi_01o.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+#globalNav p#n2{
+	height:50px;
+	background-image: url(../img/shared/navi_02.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	text-indent:-9999px;
+	display:block;
+}
+#globalNav p#n2 a:hover{
+	height:50px;
+	background-image: url(../img/shared/navi_02o.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#globalNav #gnavi1 {
+	list-style: none;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+#globalNav #gnavi1 a {
+	display: block;
+	width:230px;
+	height:15px;
+	text-decoration: none;
+	text-indent: -9999px;
+	outline: 0;
+	background-repeat: no-repeat;
+	background-position: left top;
+	margin-bottom:5px;
+}
+
+#globalNav #gnavi1 #n21 a { background: url(../img/shared/navi_02_1.jpg) 0 0;}
+#globalNav #gnavi1 #n22 a { background: url(../img/shared/navi_02_2.jpg) 0 0;}
+#globalNav #gnavi1 #n23 a { background: url(../img/shared/navi_02_3.jpg) 0 0;}
+#globalNav #gnavi1 #n24 a { background: url(../img/shared/navi_02_4.jpg) 0 0;}
+#globalNav #gnavi1 #n25 a { background: url(../img/shared/navi_02_5.jpg) 0 0;}
+
+#globalNav #gnavi1 #n21 a:hover { background: url(../img/shared/navi_02_1o.jpg) 0 0;}
+#globalNav #gnavi1 #n22 a:hover { background: url(../img/shared/navi_02_2o.jpg) 0 0;}
+#globalNav #gnavi1 #n23 a:hover { background: url(../img/shared/navi_02_3o.jpg) 0 0;}
+#globalNav #gnavi1 #n24 a:hover { background: url(../img/shared/navi_02_4o.jpg) 0 0;}
+#globalNav #gnavi1 #n25 a:hover { background: url(../img/shared/navi_02_5o.jpg) 0 0;}
+
+#globalNav p#n3{
+	height:51px;
+	background-image: url(../img/shared/navi_03.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+    text-indent:-9999px;
+	display:block;	
+}
+#globalNav p#n3 a:hover{
+	height:51px;
+	background-image: url(../img/shared/navi_03o.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#globalNav p#n11{
+	height:51px;
+	background-image: url(../img/shared/navi_11.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+    text-indent:-9999px;
+	display:block;	
+}
+#globalNav p#n11 a:hover{
+	height:51px;
+	background-image: url(../img/shared/navi_11o.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#globalNav #gnavi2 {
+list-style-type:disc;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:18px;
+	list-style-position:outside;
+}
+
+#globalNav #gnavi2 li{
+text-align:left;
+line-height:1.3em;
+margin-bottom:0.65em;
+color:#FF6600;
+}
+
+#globalNav p#n4 a{
+	height:50px;
+	background-image: url(../img/shared/navi_04.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#globalNav p#n4 a:hover{
+	height:50px;
+	background-image: url(../img/shared/navi_04o.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#globalNav p#n5 a{
+	height:50px;
+	background-image: url(../img/shared/navi_05.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#globalNav p#n5 a:hover{
+	height:50px;
+	background-image: url(../img/shared/navi_05o.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+
+/*=============================================*/
+/*         サイドバナー   */
+/*=============================================*/
+
+
+#side .banner{
+	width:250px;
+}
+
+
+#side #feed{
+width:250px;
+margin-top:10px;
+margin-bottom:10px;
+}
+#side #feed h2{
+	width:250px;
+	background-image: url(../img/shared/side_news.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	text-indent:-9999px;
+	height:45px;
+}
+#side #feed ul{
+list-style-type:disc;
+	padding-left:18px;
+	list-style-position:outside;
+}
+#side #feed li{
+text-align:left;
+line-height:1.3em;
+margin-bottom:0.65em;
+}
+
+#side #feed li a:link { color: #7D7668; text-decoration: none;}
+#side #feed li a:visited,a:active { color: #605641; text-decoration: underline;}
+#side #feed li a:hover { color: #A89F8D; text-decoration:underline;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============================================*/
+/*                ぱんくずリスト                */
+/*=============================================*/
+
+dl#pan {
+	width:725px;
+	text-align:right;
+	clear: both;
+	margin:0px auto 20px auto;
+}
+dl#pan dt {
+	position: absolute;
+	overflow: hidden;
+	height: 0px;
+	width: 0px;
+}
+
+dl#pan dd li {
+	display: inline;
+	padding-left:13px;
+	padding-right:0.6em;
+	line-height: 1.8em;
+	background:url(../img/shared/pan_i.jpg) no-repeat;
+	background-position:left 3px;
+	padding-bottom:1em;
+	padding-top:0.1em;
+	font-size:92%;
+}
+
+
+
+/*=============================================*/
+/*                ページ内リンク                */
+/*=============================================*/
+
+div.pagelink {
+    width:135px;
+	margin:30px auto;
+	padding-left:590px;
+     }
+	 
+div.pagelink p a{
+	width:135px;
+	background-image: url(../img/shared/pageup_botan.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+	height:30px;
+	display:block;
+	text-indent:-9999px;
+     }
+
+
+
+
+
+	 
+/*=============================================*/
+/*                   フッターメニュー          */
+/*=============================================*/
+
+div#footer{
+	width:100%;
+	background-image: url(/assets/shared/fotter_bk.jpg);
+	background-repeat:repeat-x;
+	background-position: center top;
+	height:200px;
+	padding-top:20px;
+	}	
+
+div#footerInner{
+	width:1000px;
+	height:70px;
+	margin:0px auto;
+	position:relative;
+	background-image: url(/assets/shared/fotter_h2.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	}
+
+div#footerInner p.b1{
+	width:177px;
+	height:41px;
+	overflow:hidden;
+	position:absolute;
+	top:10px;
+	left:816px;
+}
+
+
+
+		
+	
+	
+/* ナビゲーション部（フッター）
+-----------------------------------------------	*/
+dl#footnav1 {
+	width:790px;
+	padding-left:210px;
+	text-align:left;
+	padding-top:10px;
+	margin:0px auto;
+	background-image: url(../img/shared/fotter_n1.png);
+	background-repeat: no-repeat;
+	background-position:left bottom;
+}
+dl#footnav2 {
+	width:790px;
+	padding-left:210px;
+	text-align:left;
+	padding-top:5px;
+	padding-bottom:10px;
+	margin:0px auto;
+	background-image: url(../img/shared/fotter_n2.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+dl#footnav1 dt,dl#footnav2 dt {
+	position: absolute;
+	overflow: hidden;
+	height: 0px;
+	width: 0px;
+}
+dl#footnav1 dd li,dl#footnav2 dd li {
+	font-size:10px;
+	display: inline;
+	border-left: 1px solid #F7ECD1;
+	padding-left: 0.6em;
+	line-height: 2em;
+	letter-spacing:normal;
+}
+li.footnavEnd {
+	border-right: 1px solid #F7ECD1;
+	padding-right: 0.6em;
+}
+
+dl#footnav1 dd li a:link,dl#footnav2 dd li a:link { color: #5E594E; text-decoration: underline;}
+dl#footnav1 dd li a:visited,a:active,dl#footnav2 dd li a:visited,a:active { color: #464136; text-decoration: underline;}
+dl#footnav1 dd li a:hover,dl#footnav2 dd li a:hover { color: #8E8779; text-decoration:underline;}
+
+
+
+p#copyright{
+	width:1000px;
+	background-image: url(/assets/shared/copyright.png);
+	background-repeat:no-repeat;
+	background-position: left top;
+	height:20px;
+	text-indent:-9999px;
+	margin:0px auto;
+	margin-top: 55px;
+	}	
+
+
+/*=============================================*/
+/*               回り込み                  */
+/*=============================================*/
+
+.fL {
+     float:left;
+}
+
+.fR {
+     float:right;
+}
+
+
+/*=============================================*/
+/*           親要素による回り込み解除          */
+/*=============================================*/
+
+.clearfix{}
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 1px;
+    overflow: hidden;
+}
+
+/*\*/
+* html .clearfix {
+    height: 1em;
+    overflow: visible;
+}
+/**/	
+/*=============================================*/
+/*           空要素による回り込み解除          */
+/*=============================================*/
+
+br.clear{width:0px; height:0px; clear:both;}
+
+
+
+/*=============================================*/
+/*                    vcard                 */
+/*=============================================*/
+
+dl.vcard {
+    width:850px;
+	color:#FDF1E4;
+}
+
+dl.vcard dt {
+	margin: 0;
+	margin-right: -80px;
+	padding:1px 0;
+	float: left;
+	clear: both;
+	display: inline;
+	width: 80px;
+	text-indent: 0px;
+	text-align:left;
+	font-size:10px;
+}
+
+dl.vcard dd {
+	margin-left:80px;
+	padding:1px 0;
+	font-size:10px;
+	text-align:left;
+}
+
+dl.vcard dd.fn {
+	font-weight:bold;
+	font-size:12px;
+	margin-left:0px;
+}
+
+
+dl.vcard {
+	/*\*/
+	min-height: 1px;
+	_height: 1%;
+	/* */
+
+	/*\*//*/
+	overflow: hidden;
+	/**/
+}
+
+dl.vcard::after {
+	height: 0;
+	visibility: hidden;
+	content: ".";
+	display: block;
+	clear: both;
+}
+
+/*=============================================*/
+/*                    Oo 20150324                 */
+/*=============================================*/
+.beer {
+	background-color: green;
+	margin-bottom: 25px;
+	border: 4px solid;
+	color: orange;
+	width: 637px;
+	height: 40px; 
+	padding-top: 5px;　
+}
+
+.title {
+	border: 5px solid;
+  	color: #FCC106;
+  	height: 48px;
+  	margin-top: 25px;
+  	margin-bottom: 20px;
+  	border-radius: 5px;
+  	margin-left: 15px;
+  	width: 966px;
+}
+
+.title p {
+	padding-top: 1px;
+	font-weight: bold;
+	font-size: 25px;
+	color: #5E594E;
+}
+
+.img-border {
+	border: 5px solid;
+	color: orange;
+}
+
+#contact_body {
+	height: 150px;
+}
+
+.col-md-12 {
+	font-family:zawgyi-one;
+}
