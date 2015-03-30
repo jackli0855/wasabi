@@ -1,6 +1,12 @@
 #encoding: utf-8
 class WebController < ApplicationController
 
+	before_filter :set_locale
+	def set_locale
+		I18n.locale = params[:locale] || I18n.default_locale ;
+	end
+	
+
 	def send_order
 		@purchase = Purchase.new
 		img_src = params[:selected_img]
@@ -32,7 +38,7 @@ class WebController < ApplicationController
 	def drink
 	end
 
-	def sashimi
+	def guide
 	end
 
 	def steak
