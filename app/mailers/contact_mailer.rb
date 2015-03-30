@@ -7,6 +7,7 @@ class ContactMailer < ActionMailer::Base
   #   @url  = 'http://wasabiyangon.com/'
   #   mail(to: @purchase.email, subject: 'Order Mail')
   # end
+  
   def welcome_email(contact)
     @contact = contact
     @url  = 'http://wasabiyangon.com'
