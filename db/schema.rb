@@ -11,29 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150328092138) do
-
-  create_table "contacts", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "name"
-    t.string   "nickname"
-    t.string   "phone"
-    t.string   "email"
-    t.string   "subject"
-    t.string   "body"
-  end
-
-  create_table "messages", force: true do |t|
-    t.string   "name"
-    t.string   "company"
-    t.string   "phone"
-    t.string   "email"
-    t.string   "subject"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20141116110439) do
 
   create_table "purchases", force: true do |t|
     t.string   "name"
