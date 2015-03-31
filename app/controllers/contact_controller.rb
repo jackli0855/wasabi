@@ -1,5 +1,5 @@
 class ContactController < ApplicationController
-  
+
   def new
   	@contact = Contact.new
   end
@@ -17,4 +17,5 @@ class ContactController < ApplicationController
   		flash[:error] = "Sorry, this message appears to be spam and was not delivered."
   	end
   end
+  
 end
