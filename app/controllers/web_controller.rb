@@ -31,28 +31,10 @@ class WebController < ApplicationController
 	def order_over
 	end
 
-	def curry
-	end
-
-	def drink
-	end
-
 	def guide
 	end
 
-	def steak
-	end
-
-	def sushi
-	end
-
-	def about
-	end
-
 	def contact
-	end
-
-	def yakimono
 	end
 
 	def delivery
