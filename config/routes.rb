@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'contact/new'
+
+  get 'contact/create'
+
+  resources :contacts
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -23,15 +29,9 @@ Rails.application.routes.draw do
       post "order"
       get "order_over"
       get "index"
-      get "curry"
-      get "sushi"
-      get "about"
-      get "contact"
-      get "drink"
-      get "yakimono"
-      get "steak"
-      get "sashimi"
+      get "guide"
       get "delivery"
+
     end
   end
 
