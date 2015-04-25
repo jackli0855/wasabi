@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get 'contact/create'
 
+
+
   resources :contacts
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -31,6 +33,7 @@ Rails.application.routes.draw do
       get "index"
       get "guide"
       get "delivery"
+      get "contact"
 
     end
   end

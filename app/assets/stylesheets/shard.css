@@ -77,6 +77,15 @@ a:hover { color: #F12E03; text-decoration:underline;}
 	position:relative;
 	margin:0px auto;
 }
+#header2 {
+	width:1000px;
+	height:125px;
+	background-image: url(/assets/shared/header2.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	position:relative;
+	margin:0px auto;
+}
 #header h1 a{
 	width:350px;
 	height:85px;
@@ -468,6 +477,16 @@ div#footerInner{
 	margin:0px auto;
 	position:relative;
 	background-image: url(/assets/shared/fotter_h2.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	}
+
+div#footerInner2{
+	width:1000px;
+	height:70px;
+	margin:0px auto;
+	position:relative;
+	background-image: url(/assets/shared/fotter2.png);
 	background-repeat: no-repeat;
 	background-position: center top;
 	}
