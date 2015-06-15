@@ -22,33 +22,32 @@
     <div id="header">
       <div class="col-md-5">
         <h1><a href="/">わさび飲食店ホームページ</a></h1>
-        <p style="float:left;margin-left: 142px;margin-top: 56px;color: #E68002;font-family:zawgyi-one;"><%= t("header.yangon")%>
-        <b style="font-size: 18px;"><%= t("header.jpres")%></b></p>
+        <p style="float:left;margin-left: 142px;margin-top: 56px;color: #E68002;font-family:zawgyi-one;"></b></p>
       </div>
       <div class="col-md-5" style="margin-left: 20px;">
-        <p style="float:left;margin-top: 41px;color: #E68002;font-family:zawgyi-one;"><b><%= t("header.phoneinq")%></b>
+        <p style="float:left;margin-top: 41px;color: #E68002;font-family:zawgyi-one;"><b></b>
         </p>
         <div style="margin-top: 67px;">
-          <p style="float:left;color: #E68002;font-family:zawgyi-one;"><b><%= t("header.phoneoth")%></b>
+          <p style="float:left;color: #E68002;font-family:zawgyi-one;"><b></b>
           </p>
         </div>
         <div style="margin-top: 96px;">
           <p style="float:left;color: #654D4D;;font-family:zawgyi-one;font-size: 12px; font-weight: bold;">
-            <%= t("header.shoptime")%>
+          
           </p>
         </div>
       </div>
       <div class="col-md-2" style="margin-left: -57px; margin-top: -3px;">
-        <p style="float:left;margin-top: 20px;color: #E68002;;font-family:zawgyi-one;font-size: 12px;"><b><%= t("header.japanphone")%></b>
+        <p style="float:left;margin-top: 20px;color: #E68002;;font-family:zawgyi-one;font-size: 12px;"><b></b>
         </p>
-        <p style="float:left;margin-top: -2px;color: #E68002;;font-family:zawgyi-one;font-size: 12px;"><b><%= t("header.japanphone2")%></b>
+        <p style="float:left;margin-top: -2px;color: #E68002;;font-family:zawgyi-one;font-size: 12px;"><b></b>
         </p>
          <p class="b1"><a href="/contact"><img src="/assets/shared/btn_inquiry.png" width="177" height="82" alt="お問い合わせ" /></a></p>
       </div>
     </div>
     <div style="float: right; margin-top: -100px; margin-right: 28px;">
       <%= form_tag({}, {:method => :get}) do %>
-        <%= select_tag :locale, options_for_select(['Languages',['Japanese', 'ja'], ['English', 'en'],['Myanmar', 'mm']]), :onchange => "this.form.submit();" %>
+        <%= select_tag :locale, options_for_select(['Languages',['Japanese', 'ja'],['Myanmar', 'mm']]), :onchange => "this.form.submit();" %>
       <% end %>
     </div>
     <div class="contianer">
@@ -57,19 +56,19 @@
   <div id="footer">
     <div id="footerInner">
       <div class="col-md-5">
-          <p style="float:left;margin-left: 129px;margin-top: 17px;color: #5E594E;font-family:zawgyi-one;"><%= t("header.yangon")%>
-            <b style="font-size: 18px;"><%= t("header.jpres")%></b></p>
+          <p style="float:left;margin-left: 129px;margin-top: 17px;color: #5E594E;font-family:zawgyi-one;">
+            <b style="font-size: 18px;"></b></p>
       </div>
       <div class="col-md-6" style="float:left;margin-left: -47px;margin-top: -38px;">
-        <p style="float:left;margin-top: 41px;color: #fff;font-family:zawgyi-one;"><b><%= t("header.phoneinq")%></b>
+        <p style="float:left;margin-top: 41px;color: #fff;font-family:zawgyi-one;"><b></b>
         </p>
         <div style="margin-top: 67px;">
-          <p style="float:left;color: #fff;font-family:zawgyi-one;"><b><%= t("header.phoneoth")%></b>
+          <p style="float:left;color: #fff;font-family:zawgyi-one;"><b></b>
           </p>
         </div>
         <div style="margin-top: 96px;">
           <p style="float:left;color: #654D4D;;font-family:zawgyi-one;font-size: 12px; font-weight: bold;">
-            <%= t("header.shoptime")%>
+           
           </p>
         </div>
       </div>

@@ -71,7 +71,7 @@ a:hover { color: #F12E03; text-decoration:underline;}
 #header {
 	width:1000px;
 	height:125px;
-	background-image: url(/assets/shared/header02.png);
+	background-image: url(/assets/shared/header2.png);
 	background-repeat: no-repeat;
 	background-position: center top;
 	position:relative;
@@ -105,7 +105,7 @@ a:hover { color: #F12E03; text-decoration:underline;}
 	overflow: hidden;
 	float: right;
 	margin-right: -53px;
-	margin-top: 14px;
+	margin-top: 75px;
 }
 
 #header #nikkeigranprix a{
@@ -473,10 +473,10 @@ div#footer{
 
 div#footerInner{
 	width:1000px;
-	height:70px;
+	height:110px;
 	margin:0px auto;
 	position:relative;
-	background-image: url(/assets/shared/fotter_h2.png);
+	background-image: url(/assets/shared/fotter2_02.png);
 	background-repeat: no-repeat;
 	background-position: center top;
 	}
@@ -561,7 +561,7 @@ p#copyright{
 	height:20px;
 	text-indent:-9999px;
 	margin:0px auto;
-	margin-top: 55px;
+	margin-top: 30px;
 	}	
 
 
