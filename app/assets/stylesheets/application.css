@@ -18,31 +18,31 @@
  */
  @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../assets/font/glyphicons-halflings-regular.eot');
-  src: url('../assets/font/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
-       url('../assets/font/glyphicons-halflings-regular.woff') format('woff'),
-       url('../assets/font/glyphicons-halflings-regular.ttf') format('truetype'),
-       url('../assets/font/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
-  src: url('../assets/font/flexslider-icon.eot?#iefix') format('embedded-opentype'),
-       url('../assets/font/flexslider-icon.woff') format('woff'),
-       url('../assets/font/flexslider-icon.ttf') format('truetype'),
-       url('../assets/font/flexslider-icon.svg#flexslider-icon') format('svg');
+  src: url('/assets/font/glyphicons-halflings-regular.eot');
+  src: url('/assets/font/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+       url('/assets/font/glyphicons-halflings-regular.woff') format('woff'),
+       url('/assets/font/glyphicons-halflings-regular.ttf') format('truetype'),
+       url('/assets/font/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('/assets/font/flexslider-icon.eot?#iefix') format('embedded-opentype'),
+       url('/assets/font/flexslider-icon.woff') format('woff'),
+       url('/assets/font/flexslider-icon.ttf') format('truetype'),
+       url('/assets/font/flexslider-icon.svg#flexslider-icon') format('svg');
 }
 
 @font-face {
     font-family: 'Zawgyi-One';
-    src: url('../assets/fonts/zawgyi-webfont.eot'), /* IE9 Compat Modes */
-         url('../assets/fonts/zawgyi-webfontd41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../assets/fonts/zawgyi-webfont.woff') format('woff'), /* Modern browsers */
-         url('../assets/fonts/zawgyi-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
+    src: url('/assets/fonts/zawgyi-webfont.eot'), /* IE9 Compat Modes */
+         url('/assets/fonts/zawgyi-webfontd41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/zawgyi-webfont.woff') format('woff'), /* Modern browsers */
+         url('/assets/fonts/zawgyi-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
 @font-face {
     font-family: 'RSU';
-    src: url('../assets/fonts/rsu_regular-webfont.eot'), /* IE9 Compat Modes */
-         url('../assets/fonts/rsu_regular-webfontd41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../assets/fonts/rsu_regular-webfont.woff') format('woff'), /* Modern browsers */
-         url('../assets/fonts/rsu_regular-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
+    src: url('/assets/fonts/rsu_regular-webfont.eot'), /* IE9 Compat Modes */
+         url('/assets/fonts/rsu_regular-webfontd41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/rsu_regular-webfont.woff') format('woff'), /* Modern browsers */
+         url('/assets/fonts/rsu_regular-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
 
