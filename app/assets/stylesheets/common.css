@@ -1,8 +1,6 @@
 @charset "utf-8";
 
 
-
-
 /* リセット定義
 -----------------------------------------------	*/
 html, body {
@@ -27,6 +25,7 @@ h1, h2, h3, h4, h5, h6, address {
 	font-style: normal;
 	font-weight: normal;
 	font-size: 100%;
+	line-height:  1.4em;
 }
 
 div, blockquote, p, pre, ul, ol, li, dl, dt, dd {
