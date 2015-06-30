@@ -1,5 +1,11 @@
 @charset "utf-8";
-
+@font-face {
+    font-family: 'Zawgyi-One';
+    src: url('/assets/fonts/zawgyi-webfont.eot'), /* IE9 Compat Modes */
+         url('/assets/fonts/zawgyi-webfontd41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/zawgyi-webfont.woff') format('woff'), /* Modern browsers */
+         url('/assets/fonts/zawgyi-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
+}
 
 /* リセット定義
 -----------------------------------------------	*/
