@@ -21,9 +21,9 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   # get '/web/:id', to: 'web#order', via: [:post]
-  
-  resources :web do 
-    # member do 
+
+  resources :web do
+    # member do
     #   get "index"
     # end
     collection do
@@ -79,4 +79,6 @@ Rails.application.routes.draw do
   #   end
   # get ':controller/:action/:id'
   root 'web#index'
+
+
 end
