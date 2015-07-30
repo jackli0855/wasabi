@@ -12,7 +12,7 @@ set -e
  
 # Feel free to change any of the following variables for your app:
 TIMEOUT=${TIMEOUT-60}
-APP_ROOT=/home/alpha/workspace/myPro/wasabi
+APP_ROOT=/home/ec2-user/var/www/wasabi
 PID=$APP_ROOT/tmp/pids/unicorn.pid
 CMD="cd $APP_ROOT; bundle exec unicorn -D -c $APP_ROOT/config/unicorn.conf -E production"
 AS_USER=<user>
