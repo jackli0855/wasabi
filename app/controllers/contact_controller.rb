@@ -5,17 +5,23 @@ class ContactController < ApplicationController
   end
 
   def create
-  	begin
-  		@contact = Contact.new(params[:contact])
-  		@contact.request = request
-  		if @contact.deliver
+  	# begin
+  		@contact = Contact.new(contact_params)
+  		#@contact.request = request
+  		if @contact.save
   			flash.now[:notice] = "Thank you for your message!"
   		else
-  			render :new
+  			render 'new'
   		end
-  	rescue ScriptError
-  		flash[:error] = "Sorry, this message appears to be spam and was not delivered."
-  	end
+  	# rescue ScriptError
+  	# 	flash[:error] = "Sorry, this message appears to be spam and was not delivered."
+  	# end
   end
-  
+
+  private
+
+    def contact_params
+    params.require(:contact).permit(:name, :nickname, :email, :subject, :body)
+    end
+
 end

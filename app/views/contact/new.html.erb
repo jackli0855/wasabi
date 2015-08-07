@@ -7,18 +7,48 @@
 			        お問い合わせは、下記フォームの項目にご記入いただき、［送信］ボタンをクリックして下さい。<br />
 			        各種パーティー・団体様ご来店のご相談も受け付けておりますので、お気軽にご連絡ください。<br />
 			        ※ご来店のご予約は電話でのみ受付とさせていただいております。<br /><br />
-			        <span>Tel.09-503-9139</span>
+			        <span> Tel.09-503-9139</span>
 			    </p>
 			    <p>お問合わせ内容によりましては、ご返信できない場合もございますので、あらかじめご了承ください。 </p>
 			</div><!--panel-heading-->
 			<div class="panel-body">
-				<%= simple_form_for @contact do |f| %>
-					<%= f.input :name, :required => false %>
-					<%= f.input :nickname, :required => false %>
- 					<%= f.input :email, :required => true %>
- 					<%= f.input :subject, :required => true %>
- 					<%= f.input :body, as: :text, :required => true, :size => "150", cols: 150 %>
- 					<%= f.button :submit, 'Send message' %>
+				<%= form_for :contact, url: {action: "create"} do |f| %>
+					<div>
+						<% if @contact.errors.any? %>
+						  <div id="errors">
+						    <h2><%= pluralize(@contact.errors.count, "error") %>　prevented this post from saving</h2>
+						    <ul>
+						      <% @contact.errors.full_messages.each do |msg| %>
+						        <li><%= msg %></li>
+						      <% end %>
+						    </ul>
+						  </div>
+						<% end %>
+						<p>
+						<%= f.label :name, "Name" %><br/>
+						<%= f.text_field :name, :required => false, :size => "150"%>
+						</p><br/>
+						<p>
+						<%= f.label :nickname, "Nickname" %><br/>
+						<%= f.text_field :nickname, :required => false %>
+						</p><br/>
+						<p>
+						<%= f.label :email, "Email*" %><br>
+						<%= f.email_field :email, :required => true %>
+						</p><br>
+						<p>
+						<%= f.label :subject, "Subject*" %><br>
+						<%= f.text_field :subject, :required => true %>
+						</p><br>
+						<p>
+						<%= f.label :body, "Body*"  %><br>
+        						<%= f.text_area :body, :required => true %>
+        						</p>
+ 					</div>
+ 					<br/>
+ 					<div>
+ 						<%= f.submit "Send message" %>
+ 					</div>
  				<% end %>
 			</div><!--panel-body-->
 		</div><!--panel panel-primary-->
